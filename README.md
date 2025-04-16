@@ -1,6 +1,34 @@
 # nanites
 
+This is a simple web server written in Go that uses SQLite as the database.
+It serves a React + TypeScript + Vite frontend.
+It is designed to be a minimal example of how to set up a web server with a frontend and a database.
+
+## Features
+
+- React + TypeScript + Vite (embedded in Go)
+- SQLite database with schema migrations
+- REST API endpoints
+- Docker support
+- Environment variable configuration (using `.env` file)
+
 ## Running the server
+
+Build the frontend:
+
+```shell
+cd frontend
+bun install
+bun run build
+```
+
+Then build the Go server:
+
+```shell
+go build -o app .
+```
+
+Or if you want to run the server in development mode, you can use:
 
 ```shell
 go run main.go
