@@ -1,4 +1,4 @@
-# nanites
+# nanites (template)
 
 This is a simple web server written in Go that uses SQLite as the database.
 It serves a React + TypeScript + Vite frontend.
