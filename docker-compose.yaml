@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/app/data  # Mount for SQLite DB persistence
+    environment:
+      - DATABASE_PATH=/app/data/nanites.db
