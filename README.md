@@ -1,4 +1,4 @@
-# nanites (template)
+# Go-Vite
 
 This is a simple web server written in Go that uses SQLite as the database.
 It serves a React + TypeScript + Vite frontend.
@@ -91,11 +91,11 @@ To manually run the migrations:
 
 ```shell
 # Run the migrations
-migrate -path data/migrations -database "sqlite3://./data/nanites.db" up
+migrate -path data/migrations -database "sqlite3://./data/go-vite.db" up
 
 # Rollback the migrations
-migrate -path data/migrations -database "sqlite3://./data/nanites.db" down
+migrate -path data/migrations -database "sqlite3://./data/go-vite.db" down
 
 # Rollback the last migration
-migrate -path data/migrations -database "sqlite3://./data/nanites.db" down 1
+migrate -path data/migrations -database "sqlite3://./data/go-vite.db" down 1
 ```

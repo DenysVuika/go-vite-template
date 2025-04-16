@@ -1,4 +1,4 @@
-module nanites
+module go-vite
 
 go 1.24.2
 

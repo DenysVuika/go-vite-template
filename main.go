@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"nanites/api"
-	"nanites/frontend"
+	"go-vite/api"
+	"go-vite/frontend"
 	"net/http"
 	"os"
 	"time"
@@ -25,14 +25,14 @@ var (
 	GitCommit = "unknown"
 )
 
-const dbPath = "./data/nanites.db"
+const dbPath = "./data/go-vite.db"
 
 func ApplyMigrations() {
 	log.Info().Msg("Applying database migrations...")
 
 	m, err := migrate.New(
 		"file://data/migrations",
-		"sqlite3://data/nanites.db",
+		"sqlite3://data/go--vite.db",
 	)
 	if err != nil {
 		log.Fatal().Err(err)
@@ -45,7 +45,7 @@ func ApplyMigrations() {
 }
 
 func main() {
-	fmt.Printf("%s v.%s (Commit: %s, Built: %s)\n", "nanites", Version, GitCommit, BuildDate)
+	fmt.Printf("%s v.%s (Commit: %s, Built: %s)\n", "go-vite", Version, GitCommit, BuildDate)
 
 	// Configure logger
 	zerolog.TimeFieldFormat = zerolog.TimeFormatUnix

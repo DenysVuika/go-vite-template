@@ -8,6 +8,6 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./data:/app/data  # Mount for SQLite DB persistence
+      - ./data:/app/data # Mount for SQLite DB persistence
     environment:
-      - DATABASE_PATH=/app/data/nanites.db
+      - DATABASE_PATH=/app/data/go-vite.db
