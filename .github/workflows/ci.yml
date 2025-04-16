@@ -34,5 +34,5 @@ jobs:
         working-directory: ./frontend  # Change to the frontend directory
 
       - name: Build project
-        run: bun build
+        run: bun run build
         working-directory: ./frontend  # Change to the frontend directory
