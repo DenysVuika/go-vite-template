@@ -41,4 +41,7 @@ migrate -path data/migrations -database "sqlite3://./data/nanites.db" up
 
 # Rollback the migrations
 migrate -path data/migrations -database "sqlite3://./data/nanites.db" down
+
+# Rollback the last migration
+migrate -path data/migrations -database "sqlite3://./data/nanites.db" down 1
 ```
